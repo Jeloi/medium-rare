@@ -1,1 +1,3 @@
 assets/scss/lib/
+/node_modules
+.sass-cache
