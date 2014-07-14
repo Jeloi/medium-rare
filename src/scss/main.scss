@@ -1,13 +1,15 @@
-/* Bourbon Family */
+/* Bourbon Family & Base from Bitters */
 @import "lib/bourbon/bourbon";
+@import "base/base-main"; 
 @import "lib/neat/neat";
 
-@import "base/base-main"; // boiled from bitters
+
+
 
 /* Modules */
 
 // Typography and Elements
-@import 'modules/typography';
+// @import 'modules/typography';
 @import 'modules/forms';
 @import 'modules/tables';
 @import 'modules/lists';

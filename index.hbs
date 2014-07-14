@@ -5,10 +5,30 @@
 
 {{! The big featured header on the homepage, with the site logo and description }}
 <header class="cover u-fillHeight" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="cover-content">
-        {{#if @blog.logo}}<a class="blogLogo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-        <h1 class="blogTitle">{{@blog.title}}</h1>
-        <h2 class="blogDescription">{{@blog.description}}</h2>
+    <div class="cover-main">
+        <div class="cover-content">
+            {{#if @blog.logo}}<a class="cover-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" class="cover-logo-image" /></a>{{/if}}
+            <h1 class="cover-title"><a href="">{{@blog.title}}</a></h1>
+            <span class="cover-subtitle"></span>
+            <p class="cover-description u-gray-darker">{{@blog.description}}</p>
+            <div class="cover-links">
+                <ul class="inlineList">
+                    <li class="inlineList-item">
+                        <a href="" class="symbol">twitterbird</a>
+                    </li>
+                    <li class="inlineList-item">
+                        <a href="https://github.com/Jeloi" class="symbol">githubalt</a>
+                    </li>
+                    <li class="inlineList-item">
+                        <a href="" class="symbol">dribble</a>
+                    </li>
+                    <li class="inlineList-item">
+                        <a href="" class="symbol">linkedin</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
     </div>
 </header>
 
