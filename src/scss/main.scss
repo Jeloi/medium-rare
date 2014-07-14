@@ -1,5 +1,12 @@
-/*------- Bourbon Family -------*/
+/* Bourbon Family */
 @import "lib/bourbon/bourbon";
 @import "lib/neat/neat";
 
-@import "base/base" // boiled from bitters
+@import "base/base"; // boiled from bitters
+
+/* Modules */
+
+
+/* Partials */
+@import "partials/cover";
+@import "partials/footer";

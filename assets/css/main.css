@@ -1,4 +1,4 @@
-/*------- Bourbon Family -------*/
+/* Bourbon Family */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -250,3 +250,6 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap;
 }
+
+/* Modules */
+/* Partials */
