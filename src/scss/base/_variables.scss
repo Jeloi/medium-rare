@@ -11,21 +11,6 @@ $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip
 $header-line-height: $base-font-size * 1.25;
 $base-border-radius: em(3);
 
-// Link Colors
-$base-link-color: $base-font-color;
-$hover-link-color: darken($base-font-color, 15);
-$base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
-
-// Border color
-$base-border-color: $gray-light;
-
-// Flash Colors
-$alert-color: $light-yellow;
-$error-color: $light-red;
-$notice-color: $light-yellow;
-$success-color: $light-green;
-
 // Forms
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);

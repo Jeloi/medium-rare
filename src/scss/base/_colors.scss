@@ -19,3 +19,18 @@ $base-background-color: white;
 // Font Colors
 $base-font-color: $gray-darkest;
 $base-accent-color: $blue;
+
+// Link Colors
+$base-link-color: $base-font-color;
+$hover-link-color: darken($base-font-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: $gray-light;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
