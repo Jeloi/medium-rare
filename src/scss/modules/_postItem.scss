@@ -1,0 +1,72 @@
+.postItem {
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	padding: 30px 0;
+	
+	&:last-child {
+		border-bottom: 0;
+	}
+	
+	.postItem-title {
+		margin-bottom: 8px;
+	}
+
+	.postItem-excerpt {
+		p {
+			font-size: 20px;
+			line-height: 1.2;
+			color: $gray-darker;
+			margin-bottom: 4px;
+			font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+			letter-spacing: -0.02em;
+			font-weight: 300;
+			font-style: normal;
+		}
+	}
+	.postItem-meta {
+		font-size: 13px;
+		line-height: 1;
+
+		time {
+			color: $gray-darker;
+		}
+	}
+	.postItem-tags {
+		font-size: 13px;
+		a {
+			color: $gray-dark;
+
+			&:first-child {
+				margin-left: 20px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.u-dotSeparator { margin: 0 6px;}
+	}
+
+/* Media Query: Under 500px */
+@media (max-width: $small-screen) {
+	padding: 20px 0;
+	.postItem-title > a {
+		font-size: 22px;
+	}
+	.postItem-excerpt > p {
+		font-size: 16px;
+	}
+	.postItem-meta {
+		// font-size: 12px;
+	}
+	.postItem-tags {
+		display: block;
+		a {
+			font-size: 12px;
+			// color: $gray;
+			&:first-child {
+				margin-left: 0px;
+			}
+		}
+	}
+}
+
+}

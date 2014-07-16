@@ -1,0 +1,10 @@
+<article class="postItem {{post_class}}">
+    <h3 class="postItem-title"><a href="{{url}}">{{{title}}}</a></h3>
+    <a href="{{url}}" class="postItem-excerpt">
+        <p>{{excerpt words=20}}&hellip;</p>
+    </a>
+    <span class="postItem-meta">
+    <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time>
+    </span>
+	<span class="postItem-tags">{{tags separator="<span class='u-dotSeparator'>•</span>"}}</span>
+</article>

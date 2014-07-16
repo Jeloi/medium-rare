@@ -1,0 +1,25 @@
+.l-singleColumn {
+	width: auto;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+
+
+@media (min-width: $small-screen) {
+	.l-singleColumn {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+}
+
+/* 
+   medium screen and above
+   ========================================================================== */
+
+
+@media (min-width: $medium-screen) {
+	.l-singleColumn {
+		width: 640px;
+		margin: 0 auto;
+	}
+}

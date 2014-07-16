@@ -123,6 +123,18 @@ cite:before {
   height: 100% !important;
 }
 
+.u-dotSeparator {
+  margin: 0 10px;
+  color: #cccccc;
+}
+
+/* Visibility */
+@media (max-width: 31.25em) {
+  .u-hide-small {
+    display: none;
+  }
+}
+
 /* Colors */
 .u-gray-light {
   color: #dddddd;
@@ -142,6 +154,28 @@ cite:before {
   box-sizing: border-box;
 }
 
+/* Layouts */
+.l-singleColumn {
+  width: auto;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+@media (min-width: 31.25em) {
+  .l-singleColumn {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+/* 
+   medium screen and above
+   ========================================================================== */
+@media (min-width: 42.5em) {
+  .l-singleColumn {
+    width: 640px;
+    margin: 0 auto;
+  }
+}
 /* Modules */
 fieldset {
   background: #f7f7f7;
@@ -318,6 +352,70 @@ dl dd {
   color: #FFF;
 }
 
+.postItem {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 30px 0;
+  /* Media Query: Under 500px */
+}
+.postItem:last-child {
+  border-bottom: 0;
+}
+.postItem .postItem-title {
+  margin-bottom: 8px;
+}
+.postItem .postItem-excerpt p {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #666666;
+  margin-bottom: 4px;
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  font-style: normal;
+}
+.postItem .postItem-meta {
+  font-size: 13px;
+  line-height: 1;
+}
+.postItem .postItem-meta time {
+  color: #666666;
+}
+.postItem .postItem-tags {
+  font-size: 13px;
+}
+.postItem .postItem-tags a {
+  color: #999999;
+}
+.postItem .postItem-tags a:first-child {
+  margin-left: 20px;
+}
+.postItem .postItem-tags a:hover {
+  text-decoration: underline;
+}
+.postItem .postItem-tags .u-dotSeparator {
+  margin: 0 6px;
+}
+@media (max-width: 31.25em) {
+  .postItem {
+    padding: 20px 0;
+  }
+  .postItem .postItem-title > a {
+    font-size: 22px;
+  }
+  .postItem .postItem-excerpt > p {
+    font-size: 16px;
+  }
+  .postItem .postItem-tags {
+    display: block;
+  }
+  .postItem .postItem-tags a {
+    font-size: 12px;
+  }
+  .postItem .postItem-tags a:first-child {
+    margin-left: 0px;
+  }
+}
+
 /* Partials */
 .cover {
   display: table;
@@ -350,7 +448,6 @@ dl dd {
 .cover .cover-content .cover-description {
   font-size: 16px;
   display: inline-block;
-  max-width: 600px;
   outline: 1px;
   word-break: break-word;
   letter-spacing: -0.02em;
@@ -376,4 +473,20 @@ dl dd {
 }
 .cover .cover-content a.btn {
   display: inline-block;
+}
+
+.bucket {
+  padding-bottom: 80px;
+}
+.bucket .bucket-label, .bucket .bucket-label > a {
+  text-align: left;
+  border-top: 1px solid #dddddd;
+  padding: 20px 0;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
 }

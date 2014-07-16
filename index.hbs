@@ -1,15 +1,15 @@
 {{!< default}}
 
 {{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
 <header class="cover u-fillHeight" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
     <div class="cover-main">
-        <div class="cover-content">
+        <div class="cover-content l-singleColumn">
             {{#if @blog.logo}}<a class="cover-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" class="cover-logo-image" /></a>{{/if}}
             <h1 class="cover-title"><a href="">{{@blog.title}}</a></h1>
-            <span class="cover-subtitle"></span>
+            <p class="cover-subtitle">Developer with an eye for Design, and a passion for Product</p>
             <p class="cover-description u-gray-darker">{{@blog.description}}</p>
             <div class="cover-links">
                 <ul class="inlineList">
@@ -23,33 +23,36 @@
                         <a href="" class="symbol">dribble</a>
                     </li>
                     <li class="inlineList-item">
-                        <a href="" class="symbol">linkedin</a>
+                        <a href="http://www.linkedin.com/in/jeremyho19/" class="symbol">linkedin</a>
                     </li>
                 </ul>
             </div>
-            <a href="#" class="btn">Writing</a>
+            <a href="#main" class="btn">Writing</a>
         </div>
     </div>
 </header>
 
 {{! The main content area on the homepage }}
-<main class="content" role="main">
+<main id="main" class="content" role="main">
+    <div class="bucket l-singleColumn">
+        <h2 class="bucket-label">Featured</h2>
+        {{#foreach posts}}
+        {{#if featured}}
+            {{> postItem }}
+        {{/if}}
+        {{/foreach}}
+    </div>
 
-    {{! Each post will be output using this markup }}
-    {{#foreach posts}}
+    <div class="bucket l-singleColumn">
+        <h2 class="bucket-label">Latest</h2>
 
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 
-        </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
-        </section>
-    </article>
-
-    {{/foreach}}
+        {{#foreach posts}}
+        {{#unless featured}}
+            {{> postItem }}
+        {{/unless}}
+        {{/foreach}}
+    </div>
 
     {{!! After all the posts, we have the previous/next pagination links }}
     {{pagination}}

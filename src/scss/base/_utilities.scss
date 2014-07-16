@@ -2,6 +2,20 @@
 	height: 100% !important;
 }
 
+.u-dotSeparator {
+	margin: 0 10px;
+	// font-family: Arial;
+	color: $gray;
+
+}
+
+/* Visibility */
+.u-hide-small {
+	@media (max-width: $small-screen) {
+		display: none;
+	}
+}
+
 
 /* Colors */
 .u-gray-light {

@@ -11,7 +11,9 @@
 	}
 	.cover-content {
 		margin-top: -40px;
+		// max-width: 640px;
 		text-align: center;
+
 		
 		.cover-logo-image {
 			border-radius: 50%;
@@ -31,7 +33,6 @@
 		.cover-description {
 			font-size: 16px;
 			display: inline-block;
-			max-width: 600px;
 			outline: 1px;
 			word-break: break-word;
 			letter-spacing: -0.02em;
