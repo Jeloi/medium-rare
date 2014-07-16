@@ -1,0 +1,110 @@
+.topMenu {
+	.linesButton {
+		font-size: 6px;
+		padding: 2em 1em;
+		transition: .3s;
+		cursor: pointer;
+		// user-select: none;
+		border-radius: 0.57143em;
+
+		.lines {
+			display: inline-block;
+			width: 4em;
+			height: 0.57143em;
+			background: $gray-darker;
+			border-radius: 0.28571em;
+			transition: 0.3s;
+			position: relative;
+			&:before, &:after {
+				display: inline-block;
+				width: 4em;
+				height: 0.57143em;
+				background: $gray-darker;
+				border-radius: 0.28571em;
+				transition: 0.3s;
+				position: absolute;
+				left: 0;
+				content: '';
+				-webkit-transform-origin: 0.28571em center;
+				transform-origin: 0.28571em center;
+			}
+			&:before {
+				top: 1em;
+			}
+			&:after {
+				top: -1em;
+			}
+		}
+		&.is-open {
+			.lines {
+				background: transparent;
+
+				&:before, &:after {
+					-webkit-transform-origin: 50% 50%;
+					transform-origin: 50% 50%;
+					top: 0;
+					width: 4em;
+				}
+				&:before {
+					-webkit-transform: rotate3d(0, 0, 1, -45deg);
+					transform: rotate3d(0, 0, 1, -45deg);
+				}
+
+				&:after {
+					-webkit-transform: rotate3d(0, 0, 1, 45deg);
+					transform: rotate3d(0, 0, 1, 45deg);
+				}
+			}
+		}
+	}
+
+	.menuToggle {
+		width: 28px;
+		height: 30px;
+		margin: 30px 10px 30px 30px;
+		float: left;
+		z-index: 10;
+		overflow: hidden;
+		cursor: pointer;
+		// border: 1px solid $gray-dark;
+		// border-radius: 50%;
+
+		div {
+			width: 100%;
+			height: 3px;
+			background: $gray-darker;
+			margin: 5px auto;
+			backface-visibility: hidden;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+			transition: all 0.3s;
+			border-radius: 9.14288px;
+		}
+
+		&.is-open {
+			.bar-one {
+				-webkit-transform: rotate(45deg) translate(5px, 4px);
+				-moz-transform: rotate(45deg) translate(5px, 4px);
+				-o-transform: rotate(45deg) translate(5px, 4px);
+				-ms-transform: rotate(45deg) translate(5px, 4px);
+				transform: rotate(45deg) translate(5px, 4px);
+			}
+			.bar-two {
+				opacity: 0;
+			}
+			.bar-three {
+				-webkit-transform: rotate(-45deg) translate(7px, -6px);
+				-moz-transform: rotate(-45deg) translate(7px, -6px);
+				-o-transform: rotate(-45deg) translate(7px, -6px);
+				-ms-transform: rotate(-45deg) translate(7px, -6px);
+				transform: rotate(-45deg) translate(7px, -6px);
+			}
+		}
+	}
+	
+	.topMenu-menu {
+
+	}
+}
