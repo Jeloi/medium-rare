@@ -48,11 +48,15 @@
 /* Media Query: Under 500px */
 @media (max-width: $small-screen) {
 	padding: 20px 0;
-	.postItem-title > a {
-		font-size: 22px;
+	.postItem-title {
+		margin-bottom: 0px !important;
+		a {
+			font-size: 22px;
+		}
 	}
 	.postItem-excerpt > p {
 		font-size: 16px;
+		margin-bottom: 0;
 	}
 	.postItem-meta {
 		// font-size: 12px;

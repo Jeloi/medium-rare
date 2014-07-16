@@ -176,6 +176,15 @@ cite:before {
     margin: 0 auto;
   }
 }
+#main {
+  padding-top: 50px;
+}
+@media (max-width: 31.25em) {
+  #main {
+    padding-top: 30px;
+  }
+}
+
 /* Modules */
 fieldset {
   background: #f7f7f7;
@@ -307,17 +316,28 @@ dl dd {
    Buttons
    ========================================================================== */
 .btn {
+  border-color: #5e5e5e;
+  color: #333333;
+  transition: all 0.3s;
   padding: 12px 20px;
-  border: 1px solid #333333;
   border-radius: 20px;
+  border: 1px solid;
   text-shadow: none;
   line-height: 1em;
-  color: #333333;
   -webkit-font-smoothing: antialiased;
 }
 .btn:hover {
-  color: #0d0d0d;
-  border-color: #0d0d0d;
+  border-color: #333333;
+  color: #262626;
+}
+.btn--green {
+  border-color: #91c99c;
+  color: #57ad68;
+  transition: all 0.3s;
+}
+.btn--green:hover {
+  border-color: #57ad68;
+  color: #4d9e5d;
 }
 
 .btn-large {
@@ -399,11 +419,15 @@ dl dd {
   .postItem {
     padding: 20px 0;
   }
-  .postItem .postItem-title > a {
+  .postItem .postItem-title {
+    margin-bottom: 0px !important;
+  }
+  .postItem .postItem-title a {
     font-size: 22px;
   }
   .postItem .postItem-excerpt > p {
     font-size: 16px;
+    margin-bottom: 0;
   }
   .postItem .postItem-tags {
     display: block;
@@ -475,13 +499,18 @@ dl dd {
   display: inline-block;
 }
 
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
+
 .bucket {
   padding-bottom: 80px;
 }
 .bucket .bucket-label, .bucket .bucket-label > a {
   text-align: left;
   border-top: 1px solid #dddddd;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   color: rgba(0, 0, 0, 0.3);
   font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
   font-weight: 700;

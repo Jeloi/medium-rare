@@ -1,0 +1,9 @@
+@mixin border-button-color($color) {
+	border-color: lighten($color, 17%);
+	color: $color;
+	transition: all 0.3s;
+	&:hover {
+		border-color: darken($color, 0);
+		color: darken($color, 5%);
+	}
+}

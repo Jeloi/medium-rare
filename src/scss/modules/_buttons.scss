@@ -3,20 +3,17 @@
    ========================================================================== */
 
 .btn {
+	@include border-button-color($base-button-color);
 	padding: 12px 20px;
-	border: 1px solid $base-button-color;
 	border-radius: 20px;
+	border: 1px solid;
 	// font-size: .9em;
 	text-shadow: none;
 	line-height: 1em;
-	color: $base-button-color;
 	-webkit-font-smoothing: antialiased;
-
-	&:hover {
-		color: darken($base-button-color, 15%);
-		border-color: darken($base-button-color, 15%);
+	&--green {
+		@include border-button-color($green);
 	}
-
 }
 
 .btn-large {
