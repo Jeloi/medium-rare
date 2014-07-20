@@ -38,7 +38,8 @@ $(function() {
  * Menu Lines Toggle
  */
 $('.linesButton').click(function(event) {
-  $(this).toggleClass('is-open')
+  $(this).toggleClass('is-open');
+  $(".topMenu-menu").toggleClass('is-open');
 });
 
 

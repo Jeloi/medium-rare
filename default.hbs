@@ -36,15 +36,22 @@
 <body class="{{body_class}}">
     
 <div class="topMenu">
-{{!--     <div class="menuToggle">
-        <div class="bar-one"></div>
-        <div class="bar-two"></div>
-        <div class="bar-three"></div>
-    </div> --}}
-    <div type="button" role="button" class="linesButton">
-        <span class="lines"></span>
+    <div class="topMenu-wrapper">
+        <div type="button" role="button" class="linesButton">
+            <span class="lines"></span>
+        </div>
+        <div class="topMenu-menu">
+            <nav>
+                <a href="{{@blog.url}}/#main" class="menuLink">Writing</a>
+                {{!-- <a href="" class="menuLink">Newsletter</a> --}}
+                <a href="" class="menuLink">Projects</a>
+                <a href="" class="menuLink">Me</a>
+            </nav>
+        </div>
+        <div class="logo">
+            <a href="" class="menuLink">JH</a>
+        </div>
     </div>
-    <div class="topMenu-menu"></div>
 </div>
 
     {{! Everything else gets inserted here }}
