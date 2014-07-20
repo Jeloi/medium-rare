@@ -1,17 +1,41 @@
 .topMenu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+
+	@media (min-width: 848px) {
+		top: 25px;
+		left: 30px;
+		box-shadow: none;
+		width: auto;
+	}
+
+	&.is-full {
+		@media (max-width: 848px) {
+			background: white;
+			opacity: 1;
+			width: 100%;
+			box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+			transition: box-shadow 0.5s, background 0.5s;
+		}
+	}
+
 	.linesButton {
 		font-size: 6px;
-		padding: 2em 1em;
+		padding: 2.3em 2.2em;
 		transition: .3s;
 		cursor: pointer;
 		// user-select: none;
 		border-radius: 0.57143em;
+		display: inline-block;
+		width: auto;
 
 		.lines {
 			display: inline-block;
 			width: 4em;
 			height: 0.57143em;
-			background: $gray-darker;
+			background: $gray;
 			border-radius: 0.28571em;
 			transition: 0.3s;
 			position: relative;
@@ -19,7 +43,7 @@
 				display: inline-block;
 				width: 4em;
 				height: 0.57143em;
-				background: $gray-darker;
+				background: $gray;
 				border-radius: 0.28571em;
 				transition: 0.3s;
 				position: absolute;
@@ -95,11 +119,11 @@
 				opacity: 0;
 			}
 			.bar-three {
-				-webkit-transform: rotate(-45deg) translate(7px, -6px);
-				-moz-transform: rotate(-45deg) translate(7px, -6px);
-				-o-transform: rotate(-45deg) translate(7px, -6px);
-				-ms-transform: rotate(-45deg) translate(7px, -6px);
-				transform: rotate(-45deg) translate(7px, -6px);
+				-webkit-transform: rotate(-45deg) translate(7px, -7px);
+				-moz-transform: rotate(-45deg) translate(7px, -7px);
+				-o-transform: rotate(-45deg) translate(7px, -7px);
+				-ms-transform: rotate(-45deg) translate(7px, -7px);
+				transform: rotate(-45deg) translate(7px, -7px);
 			}
 		}
 	}

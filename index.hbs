@@ -4,7 +4,7 @@
 the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<header class="cover u-fillHeight" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+<header class="cover u-fillHeight" {{#if @blog.cover}}style="background-image: url({{@blog.cover}}); background-size: cover;"{{/if}}>
     <div class="cover-main">
         <div class="cover-content l-singleColumn">
             {{#if @blog.logo}}<a class="cover-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" class="cover-logo-image" /></a>{{/if}}

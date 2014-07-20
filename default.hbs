@@ -25,6 +25,9 @@
     {{!-- Prod: main.min.css --}}
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}" />  --}}
 
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{asset "js/waypoints.min.js"}}"></script>
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
@@ -55,7 +58,6 @@
 
     {{! The main JavaScript file for Medium rare }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
 </body>
 </html>

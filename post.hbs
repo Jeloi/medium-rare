@@ -3,30 +3,42 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<main class="content" role="main">
+<main id="post" class="" role="main">
+    {{! Everything inside the #post tags pulls data from the post }}
+    {{#post}}
+
+    {{#has tag="Img"}}
+    <header class="postHeader">
+        <div class="postHeader-content">
+            <h1 class="postTitle">{{{title}}}</h1>
+            {{!-- <p class="subline">Inspiration for Article Intro Effects</p> --}}
+            <p>by <strong>{{author.name}}</strong> &#8212; Posted on <strong>{{date format="MMMM, DD YYYY"}}</strong></p>
+        </div>
+    </header>
+
+    <script>
+        $(document).ready(function() {
+
+            // Add the bg-img and remove first image
+            var img = $("#post").find('img:first'),
+            url = img.attr('src');
+            $(".postHeader").append("<div class='bg-img' style='background-image: url("+url+")'></div>")
+            img.remove();
+
+        });
+    </script>
+    {{/has}}
 
     <article class="{{post_class}}">
 
-        {{! Each post has the blog logo at the top, with a link back to the home page }}
-        <header class="post-header">
-            <a class="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    <span class="blog-title">{{@blog.title}}</span>
-                {{/if}}
-            </a>
-        </header>
 
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
 
             <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{tags prefix="on " separator=" | "}}</span>
 
             <h1 class="post-title">{{{title}}}</h1>
 
-            <section class="post-content">
-                {{content}}
+            <section class="postContent">
+                <div>{{content}}</div>
             </section>
 
             <footer class="post-footer">
@@ -58,8 +70,8 @@
 
             </footer>
 
-        {{/post}}
-
     </article>
+
+    {{/post}}
 
 </main>

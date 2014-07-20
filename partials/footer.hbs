@@ -1,10 +1,13 @@
 <footer class="footer l-singleColumn">
-    <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+    {{!-- <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a> --}}
     <div class="inner">
-         <section class="copyright">All content copyright <a href="{{@blog.url}}/">
-         	{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.
+         <section class="copyright">&copy; {{date format="YYYY"}}<a href="{{@blog.url}}/">
+         	{{@blog.title}}</a>  &bull; All rights reserved.
          </section>
-         <div>Theme: Medium Rare by Jeremy Ho</div>
-         <section class="poweredby">Happily published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
+         <div>
+         	<link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+         	Medium Rare theme by Jeremy Ho
+         </div>
+         {{!-- <section class="poweredby">Happily published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section> --}}
     </div>
 </footer>
