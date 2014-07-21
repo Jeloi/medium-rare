@@ -25,6 +25,23 @@
 		}
 	}
 
+	&.is-overImage {
+		.topMenu-menu .menuLink {
+			color: $gray-lightest;
+			&:hover {color: white;}
+		}
+		.linesButton {
+			&:hover, &.is-open {
+				.lines {
+					background: $gray-lightest;
+					&:before, &:after {
+						background: $gray-lightest;
+					}
+				}
+			}
+		}
+	}
+
 	.linesButton {
 		position: absolute;
 		left: 0;

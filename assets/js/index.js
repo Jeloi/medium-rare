@@ -35,6 +35,9 @@ $(function() {
       $('.topMenu').toggleClass('is-full');
     };
  }, { offset: 37 });
+ $('#postHeader-waypoint').waypoint(function (direction) {
+   $('.topMenu').toggleClass('is-overImage');
+ });
 
 
 /**

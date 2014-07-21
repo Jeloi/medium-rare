@@ -7,7 +7,7 @@
 	margin: 0 auto;
 	width: 100%;
 	// height: 150px;
-	background: black;
+	background: $gray-darkest;
 	transition: 0.5s;
 	height: 100%;
 	@media (min-width: $small-screen) {
@@ -104,4 +104,105 @@
    Post Content
    ========================================================================== */
 
+.postContent {
+	padding-top: 60px;
+	margin-bottom: 60px;
+	font-size: 20px;
+	.postContent-title {
+		margin-top: 40px;
+		margin-bottom: 8px;
+		@media (max-width: $small-screen) {
+			margin-top: 0px !important;
+			font-size: 34px;
+			line-height: 1.1;
+		}
+	}
+	.postContent-body {
+		margin-top: 20px;
+
+		p {
+			font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+			font-weight: normal;
+			font-style: normal;
+			color: $gray-darkest;
+		}
+		@media (min-width: $small-screen) {
+			font-size: 22px;
+			p {
+			}
+		}
+	}
+	.postContent-share {
+		font-size: 30px;
+		text-align: right;
+	}
+}
+
+/* 
+   Post Footer
+   ========================================================================== */
+
+.postFooter {
+	@include outer-container;
+
+	.postFooter-card {
+		@include span-columns(12);
+		padding: 0;
+
+		a {
+			font-weight: normal;
+			color: $gray-darker;
+			&:hover {
+				color: $gray-darkest;
+			}
+		}
+		.bucket-content {
+			margin-top: 15px;
+			margin-bottom: 30px;
+			&--padded {
+				padding-left: 90px;
+			}
+		}
+		.author-image {
+			margin-top: 15px;
+			margin-left: 10px;
+			width: 60px;
+			height: 60px;
+			float: left;
+			background-size: cover;
+			border-radius: 100%;
+		}
+		.author-name a {
+			font-weight: bold;
+			margin-bottom: 3px;
+		}
+		.author-bio {
+			font-size: 0.9em;
+			line-height: 1.1;
+			font-weight: lighter;
+		}
+		hr {
+			padding: 0;
+			display: block;
+			width: 25%;
+			margin: 16px 0;
+			border: 0px solid #dddddd;
+			border-top: 1px solid #dddddd;
+		}
+		.published {
+			color: $gray-dark;
+			font-size: 0.9em;
+		}
+	}
+
+
+	@media (min-width: $medium-screen) {
+		.postFooter-card {
+			@include span-columns(6);
+		}
+	}
+
+
+
+}
 

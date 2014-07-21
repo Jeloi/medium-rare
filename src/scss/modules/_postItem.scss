@@ -8,6 +8,7 @@
 	
 	.postItem-title {
 		margin-bottom: 8px;
+		line-height: 1;
 	}
 
 	.postItem-excerpt {
@@ -49,7 +50,6 @@
 @media (max-width: $small-screen) {
 	padding: 20px 0;
 	.postItem-title {
-		margin-bottom: 0px !important;
 		a {
 			font-size: 22px;
 		}
