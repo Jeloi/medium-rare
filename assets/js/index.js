@@ -14,6 +14,10 @@ $(function() {
       }, 800, "swing");
       return false;
     }
+  } else {
+    console.log(this.pathname);
+    console.log(this.href);
+    window.location.href = this.href;
   }
 });
 
@@ -32,7 +36,6 @@ $(function() {
     };
  }, { offset: 37 });
 
- console.log("got here!");
 
 /**
  * Menu Lines Toggle

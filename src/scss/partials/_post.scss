@@ -1,13 +1,26 @@
 /* Header */
 .postHeader {
-	position: relative;
+	// position: relative;
 	margin: 0 auto;
 	width: 100%;
-	height: 150px;
+	// height: 150px;
 	background: black;
-
+	transition: 0.5s;
+	height: 100%;
 	@media (min-width: $small-screen) {
-		height: 378px;
+		// height: auto;
+	}
+}
+
+.postHeader-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	// @media (min-width: $small-screen) {
+	// 	height: 378px;
+	// }
+	@media (min-width: $small-screen) {
+		// height: 560px;
 	}
 }
 
@@ -23,7 +36,7 @@
 	backface-visibility: hidden;
 	background-size: cover;
 	background-position: 50% 50%;
-	opacity: 0.9;
+	opacity: 0.6;
 
 }
 
@@ -33,7 +46,7 @@
 	left: 0;
 	display: block;
 	min-width: 100%;
-	height: 100%;
+	// height: 100%;
 }
 
 .postHeader-content {
@@ -43,7 +56,7 @@
 	width: 100%;
 	text-align: center;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);

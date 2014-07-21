@@ -43,7 +43,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: jaf-bernino-sans, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  line-height: 1.25em;
+  line-height: 1.15em;
   margin: 0;
   text-rendering: optimizeLegibility;
 }
@@ -178,7 +178,7 @@ cite:before {
 /* 
    medium screen and above
    ========================================================================== */
-@media (min-width: 42.5em) {
+@media (min-width: 45em) {
   .l-singleColumn {
     width: 640px;
     margin: 0 auto;
@@ -694,16 +694,17 @@ dl dd {
 
 /* Header */
 .postHeader {
-  position: relative;
   margin: 0 auto;
   width: 100%;
-  height: 150px;
   background: black;
+  transition: 0.5s;
+  height: 100%;
 }
-@media (min-width: 31.25em) {
-  .postHeader {
-    height: 378px;
-  }
+
+.postHeader-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .bg-img {
@@ -717,7 +718,7 @@ dl dd {
   backface-visibility: hidden;
   background-size: cover;
   background-position: 50% 50%;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .bg-img img {
@@ -726,7 +727,6 @@ dl dd {
   left: 0;
   display: block;
   min-width: 100%;
-  height: 100%;
 }
 
 .postHeader-content {
@@ -736,7 +736,7 @@ dl dd {
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
