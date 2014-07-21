@@ -1,4 +1,7 @@
-/* Header */
+/* 
+   Post Header
+   ========================================================================== */
+
 .postHeader {
 	// position: relative;
 	margin: 0 auto;
@@ -86,3 +89,19 @@
 .postHeader-content p.subline {
 	font-size: 1.75em;
 }
+
+/* 
+   Post Wrapper
+   ========================================================================== */
+
+.post-wrapper {
+	@media (min-width: $large-screen) {
+		width: 700px;
+	}
+}
+
+/* 
+   Post Content
+   ========================================================================== */
+
+

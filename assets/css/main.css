@@ -184,6 +184,9 @@ cite:before {
     margin: 0 auto;
   }
 }
+/* 
+   large screen and above
+   ========================================================================== */
 #main {
   padding-top: 35px;
 }
@@ -227,8 +230,6 @@ cite:before {
   display: inline-block;
   width: auto;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 2px 0 2px 0 #fff;
 }
 .topMenu .linesButton .lines {
   display: inline-block;
@@ -692,7 +693,9 @@ dl dd {
   text-transform: uppercase;
 }
 
-/* Header */
+/* 
+   Post Header
+   ========================================================================== */
 .postHeader {
   margin: 0 auto;
   width: 100%;
@@ -766,3 +769,16 @@ dl dd {
 .postHeader-content p.subline {
   font-size: 1.75em;
 }
+
+/* 
+   Post Wrapper
+   ========================================================================== */
+@media (min-width: 60em) {
+  .post-wrapper {
+    width: 700px;
+  }
+}
+
+/* 
+   Post Content
+   ========================================================================== */

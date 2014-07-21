@@ -23,3 +23,14 @@
 		margin: 0 auto;
 	}
 }
+
+/* 
+   large screen and above
+   ========================================================================== */
+
+
+@media (min-width: $large-screen) {
+	.l-singleColumn {
+		// width: 700px;
+	}
+}
