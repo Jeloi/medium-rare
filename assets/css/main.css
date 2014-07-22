@@ -40,6 +40,11 @@ body {
   font-size: 1em;
   line-height: 1.5;
 }
+@media (max-width: 31.25em) {
+  body {
+    font-size: 0.9em;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: jaf-bernino-sans, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -139,7 +144,7 @@ cite:before {
 /* Visibility */
 @media (max-width: 31.25em) {
   .u-hide-small {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -198,8 +203,9 @@ cite:before {
   left: 0px;
   z-index: 999;
   height: 37px;
+  width: 100%;
 }
-@media (min-width: 848px) {
+@media (min-width: 975px) {
   .topMenu {
     top: 25px;
     left: 30px;
@@ -207,16 +213,13 @@ cite:before {
     width: auto;
   }
 }
-@media (max-width: 848px) {
+@media (max-width: 975px) {
   .topMenu.is-full {
-    background: white;
     opacity: 1;
-    width: 100%;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.5s, background 0.5s;
   }
-  .topMenu.is-full .logo {
-    display: block;
+  .topMenu.is-full .linesButton, .topMenu.is-full nav {
+    background: rgba(255, 255, 255, 0.95);
+    transition: background 0.5s;
   }
 }
 .topMenu.is-overImage .topMenu-menu .menuLink {
@@ -224,6 +227,12 @@ cite:before {
 }
 .topMenu.is-overImage .topMenu-menu .menuLink:hover {
   color: white;
+}
+.topMenu.is-overImage nav {
+  background: none !important;
+}
+.topMenu.is-overImage .linesButton {
+  background: none !important;
 }
 .topMenu.is-overImage .linesButton:hover .lines, .topMenu.is-overImage .linesButton.is-open .lines {
   background: #f8f8f8;
@@ -235,7 +244,7 @@ cite:before {
   position: absolute;
   left: 0;
   font-size: 6px;
-  padding: 2.3em 2.2em;
+  padding: 2.3em 2.3em;
   transition: .3s;
   cursor: pointer;
   border-radius: 0.57143em;
@@ -336,38 +345,33 @@ cite:before {
 .topMenu .topMenu-wrapper {
   position: relative;
 }
-.topMenu .logo {
-  height: 37px;
-  font-size: 13px;
-  line-height: 37px;
-  margin-right: 15px;
-  position: absolute;
-  right: 0;
-  font-weight: lighter;
-  display: none;
-}
 .topMenu .topMenu-menu {
-  width: 200px;
+  width: 100%;
   height: 37px;
   position: absolute;
   top: 0;
   left: 0px;
   height: 100%;
-  background: blue;
   opacity: 0;
   transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   z-index: 900;
+}
+.topMenu .topMenu-menu nav {
+  margin-left: -5px;
 }
 .topMenu .topMenu-menu .menuLink {
   font-size: 13px;
   height: 37px;
   line-height: 37px;
-  margin-right: 0.5em;
+  padding-left: 0.5em;
   font-weight: lighter;
 }
 .topMenu .topMenu-menu.is-open {
   left: 55px;
   opacity: 1;
+}
+.topMenu .topMenu-menu.is-open nav {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 fieldset {
@@ -480,20 +484,17 @@ tr, td, th {
   vertical-align: middle;
 }
 
-ul, ol {
-  margin: 0;
+ul,
+ol {
   padding: 0;
-  list-style-type: none;
+  margin: 0 0 30px 25px;
 }
-dl {
-  margin-bottom: 0.75em;
-}
-dl dt {
-  font-weight: bold;
-  margin-top: 0.75em;
-}
-dl dd {
-  margin: 0;
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -652,7 +653,6 @@ dl dd {
   text-decoration: none;
 }
 .cover .cover-content .cover-description {
-  font-size: 16px;
   display: inline-block;
   outline: 1px;
   word-break: break-word;
@@ -795,9 +795,9 @@ dl dd {
 .postContent {
   padding-top: 60px;
   margin-bottom: 60px;
-  font-size: 20px;
 }
 .postContent .postContent-title {
+  font-size: 3em;
   margin-top: 40px;
   margin-bottom: 8px;
 }
@@ -810,15 +810,19 @@ dl dd {
 }
 .postContent .postContent-body {
   margin-top: 20px;
-}
-.postContent .postContent-body p {
   font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.postContent .postContent-body p, .postContent .postContent-body ul, .postContent .postContent-body ol {
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   color: #333333;
 }
+.postContent .postContent-body h1, .postContent .postContent-body h2, .postContent .postContent-body h3, .postContent .postContent-body h4, .postContent .postContent-body h5, .postContent .postContent-body h6 {
+  margin-bottom: 0.15em;
+}
 @media (min-width: 31.25em) {
-  .postContent .postContent-body {
+  .postContent .postContent-body p {
     font-size: 22px;
   }
 }

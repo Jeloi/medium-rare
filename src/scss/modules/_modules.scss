@@ -4,8 +4,9 @@
 	left: 0px;
 	z-index: 999;
 	height: 37px;
+	width: 100%;
 
-	@media (min-width: 848px) {
+	@media (min-width: 975px) {
 		top: 25px;
 		left: 30px;
 		box-shadow: none;
@@ -13,15 +14,18 @@
 	}
 
 	&.is-full {
-		@media (max-width: 848px) {
-			background: white;
+		@media (max-width: 975px) {
 			opacity: 1;
-			width: 100%;
-			box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-			transition: box-shadow 0.5s, background 0.5s;
-			.logo {
-				display: block;
+			// width: 100%;
+			// box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+			.linesButton, nav {
+				background: rgba(255,255,255,0.95);
+				transition: background 0.5s;
 			}
+
+			// .logo {
+			// 	display: block;
+			// }
 		}
 	}
 
@@ -30,7 +34,12 @@
 			color: $gray-lightest;
 			&:hover {color: white;}
 		}
+		nav {
+			background: none !important;
+		}
 		.linesButton {
+			background: none !important;
+
 			&:hover, &.is-open {
 				.lines {
 					background: $gray-lightest;
@@ -46,7 +55,7 @@
 		position: absolute;
 		left: 0;
 		font-size: 6px;
-		padding: 2.3em 2.2em;
+		padding: 2.3em 2.3em;
 		transition: .3s;
 		cursor: pointer;
 		// user-select: none;
@@ -54,8 +63,6 @@
 		display: inline-block;
 		width: auto;
 		z-index: 1000;
-		// background: rgba(255,255,255,0.5);
-		// box-shadow: 2px 0 2px 0 #fff;
 
 		.lines {
 			display: inline-block;
@@ -86,6 +93,7 @@
 			}
 		}
 		&.is-open {
+
 			.lines {
 				background: transparent !important;
 
@@ -165,33 +173,36 @@
 		position: relative;
 	}
 
-	.logo {
-		height: 37px;
-		font-size: 13px;
-		line-height: 37px;
-		margin-right: 15px;
-		position: absolute;
-		right: 0;
-		font-weight: lighter;
-		display: none;
+	// .logo {
+	// 	height: 37px;
+	// 	font-size: 13px;
+	// 	line-height: 37px;
+	// 	margin-right: 15px;
+	// 	position: absolute;
+	// 	right: 0;
+	// 	font-weight: lighter;
+	// 	display: none;
+	// }
 
-	}
 	.topMenu-menu {
-		width: 200px;
+		width: 100%;
 		height: 37px;
 		position: absolute;
 		top: 0;
 		left: 0px;
 		height: 100%;
-		background: blue;
 		opacity: 0;
 		transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 		z-index: 900;
+
+		nav {
+			margin-left: -5px;
+		}
 		.menuLink {
 			font-size: 13px;
 			height: 37px;
 			line-height: 37px;
-			margin-right: 0.5em;
+			padding-left: 0.5em;
 			font-weight: lighter;
 		}
 
@@ -199,6 +210,9 @@
 		&.is-open {
 			left: 55px;
 			opacity: 1;
+			nav {
+				background: rgba(255,255,255,0.95);
+			}
 		}
 	}
 }

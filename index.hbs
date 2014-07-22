@@ -10,7 +10,7 @@ the {body} of the default.hbs template, which contains our header/footer. }}
             {{#if @blog.logo}}<a class="cover-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" class="cover-logo-image" /></a>{{/if}}
             <h1 class="cover-title"><a href="">{{@blog.title}}</a></h1>
             <p class="cover-subtitle">Developer with an eye for Design, and a passion for Product</p>
-            <p class="cover-description u-gray-darker">{{@blog.description}}</p>
+            <p class="cover-description u-gray-darker u-hide-small">{{@blog.description}}</p>
             <div class="cover-links">
                 <ul class="inlineList">
                     <li class="inlineList-item">

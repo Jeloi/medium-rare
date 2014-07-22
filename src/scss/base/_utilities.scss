@@ -21,7 +21,7 @@
 /* Visibility */
 .u-hide-small {
 	@media (max-width: $small-screen) {
-		display: none;
+		display: none !important;
 	}
 }
 

@@ -15,8 +15,6 @@ $(function() {
       return false;
     }
   } else {
-    console.log(this.pathname);
-    console.log(this.href);
     window.location.href = this.href;
   }
 });
@@ -25,20 +23,25 @@ $(function() {
  * Menu Show Toggle
  */
  $('#main').waypoint(function(direction) {
-    console.log($(window).width());
-    if ($(window).width() > 725) {
+    if ($(window).width() > 975) {
       $('.topMenu').toggleClass('is-full');
     };
  }, { offset: 37 });
  $('.cover-content').waypoint(function(direction) {
-    if ($(window).width() <= 725) {
+    if ($(window).width() <= 975) {
       $('.topMenu').toggleClass('is-full');
     };
  }, { offset: 37 });
  $('#postHeader-waypoint').waypoint(function (direction) {
    $('.topMenu').toggleClass('is-overImage');
+   if ($(window).width() <= 975) {
+     $('.topMenu').toggleClass('is-full');
+   };
  });
 
+ if ($(window).width() <= 975) {
+   $('.topMenu').addClass('is-full');
+ };
 
 /**
  * Menu Lines Toggle
