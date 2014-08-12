@@ -251,6 +251,7 @@ cite:before {
   display: inline-block;
   width: auto;
   z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
 }
 .topMenu .linesButton .lines {
   display: inline-block;
